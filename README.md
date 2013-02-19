@@ -3,7 +3,7 @@ This is the sample app for the Ember.js book published by Backstop Media.
 
 ## Getting started
 
-Clone the repo and run `npm install` & `brunch build`.
+Clone the repo, `cd` into the project directory, and run `npm install -g brunch` & `brunch build`.
 You can start a server by running
 
     brunch watch --server
