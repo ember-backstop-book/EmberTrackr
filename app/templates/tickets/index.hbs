@@ -1,0 +1,7 @@
+<h3>Tickets:</h3>
+
+<ul>
+	{{#each controller}}
+		<li>{{#linkTo "tickets.show" this}}{{id}}: {{title}}{{/linkTo}}</li>
+	{{/each}}
+</ul>
