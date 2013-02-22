@@ -1,10 +1,14 @@
 /**
-    Patch the fixture serializer to properly serialize attributes. Normally
+    Patch the fixture serializer to properly serialize values. Normally
     this would not be necessary if we were using the RESTAdapter and it's serializer.
 */
 DS.FixtureSerializer.reopen({
     addAttribute: function(hash, key, value) {
         hash[key] = value;
+    },
+    
+    addId: function(hash, key, id) {
+        hash[key] = id;
     }
 });
 
