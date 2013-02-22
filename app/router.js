@@ -7,6 +7,7 @@ App.Router.map(function() {
 	});
     this.resource('users', function() {
 		this.route('show', { path: '/:user_id' });
+		this.route('edit', { path: '/:user_id/edit' });
     });
 });
 
@@ -14,3 +15,4 @@ require('routes/tickets/index');
 require('routes/tickets/new');
 require('routes/tickets/edit');
 require('routes/users/index');
+require('routes/users/edit');
