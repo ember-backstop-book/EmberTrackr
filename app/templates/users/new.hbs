@@ -1,0 +1,11 @@
+<h3>Create a new User:</h3>
+
+<h5>First Name:</h5>
+{{view Ember.TextField valueBinding="firstName"}}
+
+<h5>Last Name:</h5>
+{{view Ember.TextField valueBinding="lastName"}}
+
+<br>
+<button {{action "save"}}>Save</button>
+<button {{action "cancel"}}>Cancel</button>
