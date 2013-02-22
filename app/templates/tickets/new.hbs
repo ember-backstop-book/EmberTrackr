@@ -7,8 +7,16 @@
 {{view Ember.TextArea valueBinding="description"}}
 
 <h5>Status:</h5>
-<h5>{{status}}</h5>
+{{status}}
+
+<h5>Reported By:</h5>
+{{view Ember.Select
+         contentBinding="users"
+         optionValuePath="content"
+         optionLabelPath="content.displayName"
+         selectionBinding="reportedBy"}}
 
 
+<br><br>
 <button {{action "save"}}>Save</button>
 <button {{action "cancel"}}>Cancel</button>

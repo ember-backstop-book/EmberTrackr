@@ -9,6 +9,11 @@ DS.FixtureSerializer.reopen({
     
     addId: function(hash, key, id) {
         hash[key] = id;
+    },
+    
+    addBelongsTo: function(hash, record, key, relationship) {
+        var id = Ember.get(record, relationship.key+'.id');
+        if (!Ember.isNone(id)) { hash[key] = id; }
     }
 });
 

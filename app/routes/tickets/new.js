@@ -2,6 +2,10 @@ require('models/ticket');
 
 App.TicketsNewRoute = Ember.Route.extend({
     
+    setupControllers: function(controller, model) {
+        controller.set('users', App.User.find());
+    },
+    
     model: function() {
         return App.Ticket.createRecord();
 	},

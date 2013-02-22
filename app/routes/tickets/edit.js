@@ -2,6 +2,10 @@ require('models/ticket');
 
 App.TicketsEditRoute = Ember.Route.extend({
     
+    setupControllers: function(controller, model) {
+        controller.set('users', App.User.find());
+    },
+    
     model: function(params) {
         return App.Ticket.find(params.ticket_id);
 	},
