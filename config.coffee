@@ -14,6 +14,8 @@ exports.config =
       joinTo: 
         'javascripts/app.js': /^app/
         'javascripts/vendor.js': /^vendor/
+        'test/javascripts/test.js': /^test[\\/](?!vendor)/
+        'test/javascripts/test-vendor.js': /^test[\\/](?=vendor)/
 
       order: 
         before: [
@@ -22,12 +24,18 @@ exports.config =
           'vendor/scripts/handlebars.js',
           'vendor/scripts/ember-latest.js',
           'vendor/scripts/ember-data-latest.js',
-          'vendor/scripts/bootstrap.js'
-          ]
-
+          'vendor/scripts/bootstrap.js',
+          'test/helpers-test.js'
+        ]
+        #after: [
+        #  'test/vendor/scripts/test-helper.js'
+        #]
+		
     stylesheets:
       defaultExtension: 'css'
-      joinTo: 'stylesheets/app.css'
+      joinTo: 
+        'stylesheets/app.css': /^(app|vendor)/
+        'test/stylesheets/test.css': /^test/
       order:
         before: ['vendor/styles/bootstrap.css']
 
