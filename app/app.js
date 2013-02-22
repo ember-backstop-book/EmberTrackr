@@ -11,3 +11,4 @@ require('templates/tickets/index');
 require('templates/tickets/show');
 require('templates/tickets/new');
 require('templates/tickets/edit');
+require('templates/users/index');
