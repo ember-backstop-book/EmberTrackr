@@ -13,8 +13,8 @@ App.TicketsNewRoute = Ember.Route.extend({
             // Save the transaction
             transaction.commit();
             
-            // Transition back to the ticket list
-            this.transitionTo('tickets.index');
+            // Show the newly created ticket
+            this.transitionTo('tickets.show', this.modelFor('tickets.new'));
         },
         
         cancel: function() {

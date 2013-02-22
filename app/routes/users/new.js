@@ -13,7 +13,7 @@ App.UsersNewRoute = Ember.Route.extend({
             // Save the transaction
             transaction.commit();
             
-            // Transition back to the ticket page
+            // Show the newly created user 
             this.transitionTo('users.show', this.modelFor('users.new'));
         },
         
@@ -23,8 +23,8 @@ App.UsersNewRoute = Ember.Route.extend({
             // Discard any changes in the transaction
             transaction.rollback();
             
-            // Transition back to the ticket page
-            this.transitionTo('users.show', this.modelFor('users.new'));
+            // Transition back to the user page
+            this.transitionTo('users.index');
         }
     }
 });

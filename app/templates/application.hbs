@@ -1,9 +1,9 @@
 <header class="header">
 	<h1>EmberTrackr</h1>
-    <div>
-        {{#linkTo tickets class="btn"}}Tickets{{/linkTo}}
-        {{#linkTo users class="btn"}}Users{{/linkTo}}    
-    </div>
+    <ul class="nav nav-pills">
+        <li>{{#linkTo tickets class="btn"}}Tickets{{/linkTo}}</li>
+        <li>{{#linkTo users class="btn"}}Users{{/linkTo}}</li>
+    </ul>
 </header>
 
 {{outlet}}
