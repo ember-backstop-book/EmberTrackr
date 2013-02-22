@@ -6,7 +6,7 @@ App.Router.map(function() {
 		this.route('edit', { path: '/:ticket_id/edit' });
 	});
     this.resource('users', function() {
-        // More coming soon
+		this.route('show', { path: '/:user_id' });
     });
 });
 
