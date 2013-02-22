@@ -1,0 +1,14 @@
+<h3>Create a new Ticket:</h3>
+
+<h5>Title:</h5>
+{{view Ember.TextField valueBinding="title"}}
+
+<h5>Description:</h5>
+{{view Ember.TextArea valueBinding="description"}}
+
+<h5>Status:</h5>
+<h5>{{status}}</h5>
+
+
+<button {{action "save"}}>Save</button>
+<button {{action "cancel"}}>Cancel</button>
