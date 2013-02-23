@@ -21,8 +21,8 @@ App.User = DS.Model.extend({
     }.property('email')
 });
 
-App.User.FIXTURES = [
+App.loadFixtureData(App.User, [
     { id: 1, firstName: 'Tom', lastName: 'Dale', email: 'tom@tomdale.net' },
     { id: 2, firstName: 'Yehuda', lastName: 'Katz', email: 'wycats@gmail.com' },
     { id: 3, firstName: 'Peter', lastName: 'Wagenet', email: 'peter.wagenet@gmail.com' }
-]; 
+]);

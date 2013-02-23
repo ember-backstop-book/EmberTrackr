@@ -28,6 +28,26 @@ DS.FixtureAdapter.reopen({
 });
 
 /**
+    Normal fixtures aren't very desirable for this app. Fixture data is reloaded
+    each time `find` is invoked for a record. Effectively overriding and previous
+    changes the user may have made.
+    
+    Instead we'll just load the data like it had come from the server.
+*/
+App.loadFixtureData = function(type, data) {
+    // Falsify an empty fixture array.
+    type.FIXTURES = [];
+    
+    // Wait to load the fixture data until after the app has booted.
+    Ember.onLoad('application', function() {
+        var store = Ember.get(DS, 'defaultStore'),
+            adapter = store.adapterForType(type);
+
+        if(adapter) { adapter.didFindMany(store, type, data); }
+    });
+};
+
+/**
     Define the store class. The router will instantiate an instance for us.
  */
 App.Store = DS.Store.extend({

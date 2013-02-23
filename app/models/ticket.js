@@ -7,7 +7,7 @@ App.Ticket = DS.Model.extend({
     reportedBy: DS.belongsTo('App.User')
 });
 
-App.Ticket.FIXTURES = [
-	{ id: 1, title: 'Create a User model', description: 'Users create tickets and are assigned to tickets.', status: 'new', reportedBy: 2 },
-	{ id: 2, title: 'Allow ticket creation', status: 'resolved', reportedBy: 1 }
-];
+App.loadFixtureData(App.Ticket, [
+    { id: 1, title: 'Create a User model', description: 'Users create tickets and are assigned to tickets.', status: 'new', reportedBy: 2 },
+    { id: 2, title: 'Allow ticket creation', status: 'resolved', reportedBy: 1 }
+]);
