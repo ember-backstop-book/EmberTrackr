@@ -3,7 +3,8 @@ App.Ticket = DS.Model.extend({
   description: DS.attr('string'),
   status: DS.attr('string'),  // New | Open | Resolved
   createdAt: DS.attr('date'),
-  reportedBy: DS.belongsTo('App.User')
+  reportedBy: DS.belongsTo('App.User'),
+  assignedTo: DS.belongsTo('App.User')
 });
 
 App.loadFixtureData(App.Ticket, [

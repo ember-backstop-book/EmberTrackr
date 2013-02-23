@@ -15,11 +15,13 @@ require('templates/tickets/index');
 require('templates/tickets/show');
 require('templates/tickets/new');
 require('templates/tickets/edit');
+require('templates/tickets/_form');
 require('templates/users');
 require('templates/users/index');
 require('templates/users/show');
 require('templates/users/new');
 require('templates/users/edit');
+require('templates/users/_form');
 
 require('views/applicationView');
 require('views/tickets');

@@ -21,8 +21,24 @@
 
 <dl class="dl-horizontal">
   <dt>Reported By:</dt>
-  <dd>{{#linkTo "users.show" reportedBy}}<img {{bindAttr src="reportedBy.gravatarURL"}} width="20"/> {{reportedBy.displayName}} {{/linkTo}}</dd>
+  <dd>
+    {{#linkTo "users.show" reportedBy}}
+      <img {{bindAttr src="reportedBy.gravatarURL"}} width="20"/>
+      {{reportedBy.displayName}}
+    {{/linkTo}}
+  </dd>
 </dl>
+
+<dl class="dl-horizontal">
+  <dt>Assigned To:</dt>
+  <dd>
+    {{#linkTo "users.show" assignedTo}}
+      <img {{bindAttr src="assignedTo.gravatarURL"}} width="20"/>
+      {{assignedTo.displayName}}
+    {{/linkTo}}
+  </dd>
+</dl>
+
 
 <br><br><br>
 <p>{{#linkTo tickets.edit content classNames="btn"}}Edit Ticket{{/linkTo}}</p>
