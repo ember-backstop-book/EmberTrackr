@@ -1,3 +1,5 @@
+<p class="pull-right">{{#linkTo tickets.edit content classNames="btn"}}Edit Ticket{{/linkTo}}</p>
+
 <!-- Turn this into a custom handlebars helper -->
 <dl class="dl-horizontal">
   <dt>ID:</dt>
@@ -39,6 +41,21 @@
   </dd>
 </dl>
 
-
-<br><br><br>
-<p>{{#linkTo tickets.edit content classNames="btn"}}Edit Ticket{{/linkTo}}</p>
+<h5>Comments</h5>
+<ul class="unstyled">
+  {{#each comments}}
+    <li>
+      <small>{{formattedDate created}}</small>
+      {{#linkTo "users.show" user}}
+        <img {{bindAttr src="user.gravatarURL"}} width="20"/>
+        {{user.displayName}}
+      {{/linkTo}}
+      {{body}}
+    </li>
+  {{/each}}
+</ul>
+{{#view App.CommentField}}
+  {{view Ember.TextField valueBinding="view.body"}}
+  {{view App.UserSelect selectionBinding="view.user" contentBinding="controllers.users" prompt="Who are you?" classNames="input-medium"}}
+  <button class="btn btn-small">Save</button>
+{{/view}}
