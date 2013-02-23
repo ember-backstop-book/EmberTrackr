@@ -4,6 +4,9 @@ require('store');
 require('router');
 
 require('controllers/application');
+require('controllers/users');
+require('controllers/ticketsEdit');
+require('controllers/ticketsNew');
 
 require('templates/application');
 require('templates/index');
