@@ -41,3 +41,14 @@ Software Versions used:
 * Ember 1.0.0-rc.1
 * Handlebars 1.0 rc3
 
+## TODO
+
+Items that we either need to do, or at least consider doing.
+
+  * There is no mechanism to delete a Users or Tickets.
+  * The more I think about it, the more I feel we should use a local storage adapter.
+     * One is available here: https://github.com/rpflorence/ember-localstorage-adapter
+     * We'd need a "Reset" button to restore all data to it's default state.
+     * Maybe and "export" item to download a JSON representation of data
+
+
