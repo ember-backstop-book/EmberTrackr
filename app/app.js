@@ -15,3 +15,6 @@ require('templates/users/index');
 require('templates/users/show');
 require('templates/users/new');
 require('templates/users/edit');
+
+require('views/ticketStatus');
+require('views/userSelect');
