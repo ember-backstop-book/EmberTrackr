@@ -1,17 +1,28 @@
-<h5>ID:</h5>
-{{id}}
+<!-- Turn this into a custom handlebars helper -->
+<dl class="dl-horizontal">
+  <dt>ID:</dt>
+  <dd>{{id}}</dd>
+</dl>
 
-<h5>Title:</h5>
-{{title}}
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd>{{title}}</dd>
+</dl>
 
-<h5>Description:</h5>
-{{description}}
+<dl class="dl-horizontal">
+  <dt>Description:</dt>
+  <dd>{{description}}</dd>
+</dl>
 
-<h5>Status:</h5>
-{{status}}
+<dl class="dl-horizontal">
+  <dt>Status:</dt>
+  <dd>{{status}}</dd>
+</dl>
 
-<h5>Reported By:</h5>
-{{#linkTo "users.show" reportedBy}} {{reportedBy.displayName}} {{/linkTo}}
+<dl class="dl-horizontal">
+  <dt>Reported By:</dt>
+  <dd>{{#linkTo "users.show" reportedBy}}<img {{bindAttr src="reportedBy.gravatarURL"}} width="20"/> {{reportedBy.displayName}} {{/linkTo}}</dd>
+</dl>
 
 <br><br><br>
-<p>{{#linkTo tickets.edit content}}Edit Ticket{{/linkTo}}</p>
+<p>{{#linkTo tickets.edit content classNames="btn"}}Edit Ticket{{/linkTo}}</p>

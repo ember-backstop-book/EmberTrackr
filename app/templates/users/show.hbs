@@ -1,15 +1,22 @@
-<h5>Gravarar:</h5>
-<img {{bindAttr src="gravatarURL"}} class="img-polaroid" />
+<dl class="dl-horizontal">
+  <dd><img {{bindAttr src="gravatarURL"}} class="img-polaroid" /></dd>
+</dl>
 
-<h5>ID:</h5>
-{{id}}
+<dl class="dl-horizontal">
+  <dt>ID:</dt>
+  <dd>{{id}}</dd>
+</dl>
 
-<h5>Display Name:</h5>
-{{displayName}}
+<dl class="dl-horizontal">
+  <dt>Display Name:</dt>
+  <dd>{{displayName}}</dd>
+</dl>
 
-<h5>Email:</h5>
-{{email}}
+<dl class="dl-horizontal">
+  <dt>Email:</dt>
+  <dd>{{email}}</dd>
+</dl>
 
 
 <br><br><br>
-<p>{{#linkTo users.edit content}}Edit User{{/linkTo}}</p>
+<p>{{#linkTo users.edit content classNames="btn"}}Edit User{{/linkTo}}</p>

@@ -1,0 +1,12 @@
+<div class="span3">
+  <ul class="nav nav-list">
+    {{#each controller}}
+      <li>{{#linkTo "tickets.show" this}}{{id}}: {{title}}{{/linkTo}}</li>
+    {{/each}}
+  </ul>
+
+  <br/>
+
+  <p>{{#linkTo tickets.new classNames="btn"}}New Ticket{{/linkTo}}</p>
+</div>
+<div class="span9">{{outlet}}</div>
