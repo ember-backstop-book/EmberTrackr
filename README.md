@@ -28,9 +28,16 @@ The generated output is placed in the `public/` (by default) directory when `bru
 
 To run tests, navigate to `localhost:3333/test`
 
+## Deploying to gh-pages
+
+There is a build script, `deploy-gh-pages.sh` in the root of this repo. Running that will build and deploy a new copy of EmberTrackr to Git's pages. WARNING, this script doesn't have much error handling, make sure your repo has no unsaved changes before comming.
+
+http://ember-backstop-book.github.com/EmberTrackr
+
 ## Other
 Software Versions used:
 
 * jQuery 1.9.0
 * Ember 1.0.0-rc.1
 * Handlebars 1.0 rc3
+
