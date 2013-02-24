@@ -4,7 +4,10 @@ App.CommentField = Ember.View.extend({
     event.preventDefault();
     
     // Send the event to the controller to be handled
-    this.get('controller').send('createComment', this.get("body"), this.get("user"));
+    this.get('controller').send('createComment', 
+      this.get("body"), 
+      this.get("controller.controllers.application.currentUser")
+    );
     
     // Reset the properties
     this.set('body', null);

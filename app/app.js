@@ -11,6 +11,7 @@ require('controllers/ticketsNew');
 require('controllers/ticketsShow');
 
 require('templates/application');
+require('templates/login');
 require('templates/index');
 require('templates/tickets');
 require('templates/tickets/index');

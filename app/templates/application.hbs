@@ -1,9 +1,14 @@
 <header class="header">
   <h1><a href="/" class="logo">EmberTrackr</a></h1>
-    <ul class="nav nav-pills">
-        <li>{{#linkTo tickets class="btn"}}Tickets{{/linkTo}}</li>
-        <li>{{#linkTo users class="btn"}}Users{{/linkTo}}</li>
-    </ul>
+  <ul class="nav nav-pills">
+      <li>{{#linkTo tickets class="btn"}}Tickets{{/linkTo}}</li>
+      <li>{{#linkTo users class="btn"}}Users{{/linkTo}}</li>
+  </ul>
+  {{#if currentUser}}
+    <a class="pull-right" href="#" {{action logout}}>Logout</a>
+  {{else}}
+    {{#linkTo login classNames="pull-right"}}Login{{/linkTo}}
+  {{/if}}
 </header>
 
 {{outlet}}
