@@ -6,7 +6,7 @@ App.CommentField = Ember.View.extend({
     event.preventDefault()
     var comment = this.get('context.comments').createRecord({
       body: this.get("body"),
-      user: this.get("user"),
+      user: this.get("controller.controllers.application.currentUser"),
       created: (new Date())
     })
     // comment.get("transaction").commit()

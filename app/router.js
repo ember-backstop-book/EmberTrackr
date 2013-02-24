@@ -1,4 +1,5 @@
 App.Router.map(function() {
+  this.route('login');
   this.route('index', { path: '/'});
   this.resource('tickets', function() {
     this.route('new', { path: '/new' });
@@ -12,6 +13,8 @@ App.Router.map(function() {
   });
 });
 
+require('routes/application');
+require('routes/login');
 require('routes/tickets');
 require('routes/tickets/new');
 require('routes/tickets/edit');
