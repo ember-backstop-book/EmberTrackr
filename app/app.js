@@ -2,7 +2,6 @@ App = Ember.Application.create();
 
 require('store');
 require('router');
-require('models/comment');
 require('helpers/formattedDate');
 
 require('controllers/application');

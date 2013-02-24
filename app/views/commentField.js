@@ -1,18 +1,12 @@
-// Review: Not sure if this should be a view thing?
-
 App.CommentField = Ember.View.extend({
   tagName: "form",
   submit: function(event) {
-    event.preventDefault()
-    var comment = this.get('context.comments').createRecord({
-      body: this.get("body"),
-      user: this.get("user"),
-      created: (new Date())
-    })
-    // comment.get("transaction").commit()
-    this.setProperties({
-      // user: null,
-      body: null
-    })
+    event.preventDefault();
+    
+    // Send the event to the controller to be handled
+    this.get('controller').send('createComment', this.get("body"), this.get("user"));
+    
+    // Reset the properties
+    this.set('body', null);
   }
-})
+});

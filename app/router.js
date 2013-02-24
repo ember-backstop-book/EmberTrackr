@@ -15,6 +15,7 @@ App.Router.map(function() {
 require('routes/tickets');
 require('routes/tickets/new');
 require('routes/tickets/edit');
+require('routes/tickets/show');
 require('routes/users');
 require('routes/users/new');
 require('routes/users/edit');
